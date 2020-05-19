@@ -1,0 +1,87 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #FFF;
+}
+
+.header {
+    background-image: linear-gradient(
+        to right bottom, 
+        rgba(249, 237, 105, 0.7), 
+        rgba(184, 59, 95, 0.7),
+        rgba(106, 44, 112, 0.7)),
+        url("Splash.jpg");
+    background-size: cover;
+    background-position: top;
+    height: 100vh;
+}
+
+.heading-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.heading-primary {
+    font-size: 60px;
+    font-weight: 300;
+    letter-spacing: 8px;
+}
+
+.heading-first {
+    display: inline-block;
+
+    animation: dropIn 2s ease-in;
+}
+
+.heading-second {
+    display: inline-block;
+
+}
+
+.heading-third {
+    display: inline-block;
+}
+
+
+@keyframes dropIn {
+    0% {
+        opacity: 0;
+        transform: translate(-200px, -200px);
+    }
+
+    10% {
+        transform: translate(-100px, -140px);
+    }
+
+    30% {
+        transform: translate(0px, -80px);
+    }
+
+    45% {
+        transform: translate(75px, 0px);
+    }
+
+    60% {
+        transform: translate(50px, 45px);
+    }
+
+    85% {
+        transform: translate(30px, 20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+
+}
+
