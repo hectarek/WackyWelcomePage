@@ -34,23 +34,52 @@ body {
     font-size: 60px;
     font-weight: 300;
     letter-spacing: 8px;
+    backface-visibility: hidden;
+
 }
 
 .heading-first {
     display: inline-block;
 
-    animation: dropIn 2s ease-in;
+    animation: dropIn .8s linear;
 }
 
 .heading-second {
     display: inline-block;
 
+    animation: rotates .8s linear 1s backwards;
 }
 
 .heading-third {
     display: inline-block;
+    animation: adjusts 1.4s linear 2s backwards;
 }
 
+.heading-btn:link,
+.heading-btn:visited {
+    display: inline-block;
+    margin: 40px;
+    padding: 20px;
+    background-color: #FFF;
+    border-radius: 100px;
+    text-decoration: none;
+    color: #000;
+    transition: all .2s;
+    position: relative;
+}
+
+.heading-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgb(0,0,0,0.2);
+}
+
+.heading-btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgb(0,0,0,0.2);
+}
+
+
+/* Animation */
 
 @keyframes dropIn {
     0% {
@@ -75,7 +104,8 @@ body {
     }
 
     85% {
-        transform: translate(30px, 20px);
+        transform: translate(10px, 20px);
+        transform: scale(2);
     }
 
     100% {
@@ -85,3 +115,39 @@ body {
 
 }
 
+@keyframes rotates {
+    0% {
+        opacity: 0;
+        transform: rotate(359deg);
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes adjusts {
+    0% {
+        opacity: 0;
+        transform: translate(-10px, 10px);
+    }   
+
+    25%{
+        transform: translate(10px, 0px);
+    }
+
+    50% {
+        transform: translate(0px, 10px);
+
+    }
+
+    75%{
+        transform: translate(-10px, 0px);
+
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
